@@ -1,0 +1,18 @@
+@mixin flexAiCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin buttonColor {
+    padding: 15px 39px;
+    border: 1px solid #FF6A6A;
+    color: #F16D7F;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@mixin buttonColorHover {
+    background-color: #F16D7F;
+    color: #fff;
+}
