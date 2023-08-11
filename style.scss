@@ -997,6 +997,14 @@ summary::-webkit-details-marker {
         line-height: normal;
     }
 
+    &_list:hover {
+        color: $colorDecor;
+    }
+
+    &_list:hover svg path {
+        fill: $colorDecor;
+    }
+
     &_item {
         position: absolute;
         display: flex;

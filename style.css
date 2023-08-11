@@ -878,6 +878,12 @@ summary::-webkit-details-marker {
   font-weight: 400;
   line-height: normal;
 }
+.description_list:hover {
+  color: #F16D7F;
+}
+.description_list:hover svg path {
+  fill: #F16D7F;
+}
 .description_item {
   position: absolute;
   display: flex;
