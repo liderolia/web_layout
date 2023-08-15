@@ -988,6 +988,12 @@ summary::-webkit-details-marker {
         position: relative;
     }
 
+    &_sort[open] .description_list,
+    &_sort[open] path {
+        color: $colorDecor;
+        fill: $colorDecor;
+    }
+
     &_list {
         @include flexAiCenter;
         gap: 10px;
@@ -997,21 +1003,13 @@ summary::-webkit-details-marker {
         line-height: normal;
     }
 
-    &_list:hover {
-        color: $colorDecor;
-    }
-
-    &_list:hover svg path {
-        fill: $colorDecor;
-    }
-
     &_item {
         position: absolute;
         display: flex;
         flex-direction: column;
         gap: 6px;
         width: 100%;
-        padding: 7px 9px 11px;
+        padding: 9px 9px 12px;
         background: #FFFFFF;
         box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
         z-index: 1;
@@ -1063,8 +1061,6 @@ summary::-webkit-details-marker {
     display: inline-block;
     position: relative;
     width: 100%;
-
-
 
     & input[type="number"] {
         display: block;
@@ -1154,4 +1150,228 @@ summary::-webkit-details-marker {
 .product_site {
     margin-top: 130px;
     padding-bottom: 130px;
+}
+
+// ==== CATALOG ====
+
+.filter-sort {
+    height: 132px;
+    position: relative;
+    display: flex;
+}
+
+.filter {
+    padding: 13px 16px 16px;
+    width: 360px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 39px;
+    z-index: 10;
+
+    &[open] {
+        display: flex;
+        flex-direction: column;
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        z-index: 1;
+    }
+
+    &[open] .filter_list,
+    &[open] path {
+        color: $colorDecor;
+        fill: $colorDecor;
+    }
+
+    &_list {
+        @include flexAiCenter;
+        gap: 11px;
+        color: #000;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    &_item {
+        margin-top: 16px;
+    }
+
+    &_item[open] .filter_heading {
+        color: $colorDecor;
+    }
+
+    &_heading {
+        padding: 8px 11px 11px;
+        border-left: 5px solid $colorDecor;
+        border-bottom: 1px solid #EBEBEB;
+        color: $colorText;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_link-box {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        padding: 24px 16px;
+    }
+
+    &_link {
+        color: $colorText;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_link:hover {
+        color: $colorDecor;
+    }
+}
+
+.sort {
+    display: flex;
+    position: absolute;
+    padding-left: 390px;
+    top: 51px;
+    gap: $gap30;
+
+    &_sort {
+        position: relative;
+    }
+
+    &_sort[open] .sort_list,
+    &_sort[open] path {
+        color: $colorDecor;
+        fill: $colorDecor;
+    }
+
+    &_list {
+        @include flexAiCenter;
+        gap: 10px;
+        color: $colorText;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_item {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: calc(100% + 20px);
+        // min-width: 70px;
+        padding: 9px 9px 12px;
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        z-index: 1;
+        top: 22px;
+        left: 0;
+    }
+
+    &_item_big {
+        position: absolute;
+        @include flexAiCenter;
+        flex-direction: row;
+        gap: 6px;
+        width: 250px;
+        padding: 9px 9px 12px;
+        background: #FFFFFF;
+        box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+        z-index: 1;
+        top: 22px;
+        left: 0;
+    }
+
+    &_item_big span {
+        color: $colorDecor;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_item p {
+        color: $colorText;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+
+
+    /* ==== Бегунок ==== */
+    &_input {
+        width: 200px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        overflow: hidden;
+        height: 20px;
+        border: 1px solid #FF6A6A;
+    }
+
+    &_input::-webkit-slider-thumb {
+        background: $colorDecor;
+        cursor: pointer;
+        width: 20px;
+        height: 22px;
+        -webkit-appearance: none;
+        box-shadow: -200px 0 0 200px #EBEBEB;
+    }
+
+    &_input::-moz-range-thumb {
+        background: $colorDecor;
+        cursor: pointer;
+        height: 20px;
+        border-radius: 0px;
+        box-shadow: -200px 0px 0px 200px #EBEBEB;
+        padding: 0px;
+        margin: 0px;
+    }
+
+}
+
+.catalog_site {
+    margin-top: 0;
+}
+
+.rounded {
+    height: 190px;
+    display: flex;
+    justify-content: center;
+
+
+    &_content {
+        margin-top: 50px;
+        height: 43px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px 16px;
+        border: 1px solid #EBEBEB;
+        gap: 17px;
+    }
+
+    &_list {
+        @include flexAiCenter;
+        gap: 17px;
+        list-style-type: none;
+    }
+
+    &_list a {
+        color: #C4C4C4;
+        font-family: Lato;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &_list:hover svg path,
+    &_list a:hover,
+    &_list a:focus {
+        fill: $colorDecor;
+        color: $colorDecor;
+    }
 }

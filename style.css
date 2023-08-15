@@ -869,6 +869,10 @@ summary::-webkit-details-marker {
 .description_sort {
   position: relative;
 }
+.description_sort[open] .description_list, .description_sort[open] path {
+  color: #F16D7F;
+  fill: #F16D7F;
+}
 .description_list {
   display: flex;
   align-items: center;
@@ -878,19 +882,13 @@ summary::-webkit-details-marker {
   font-weight: 400;
   line-height: normal;
 }
-.description_list:hover {
-  color: #F16D7F;
-}
-.description_list:hover svg path {
-  fill: #F16D7F;
-}
 .description_item {
   position: absolute;
   display: flex;
   flex-direction: column;
   gap: 6px;
   width: 100%;
-  padding: 7px 9px 11px;
+  padding: 9px 9px 12px;
   background: #FFFFFF;
   box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
   z-index: 1;
@@ -1024,4 +1022,198 @@ summary::-webkit-details-marker {
 .product_site {
   margin-top: 130px;
   padding-bottom: 130px;
+}
+
+.filter-sort {
+  height: 132px;
+  position: relative;
+  display: flex;
+}
+
+.filter {
+  padding: 13px 16px 16px;
+  width: 360px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 39px;
+  z-index: 10;
+}
+.filter[open] {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  z-index: 1;
+}
+.filter[open] .filter_list, .filter[open] path {
+  color: #F16D7F;
+  fill: #F16D7F;
+}
+.filter_list {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  color: #000;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: normal;
+}
+.filter_item {
+  margin-top: 16px;
+}
+.filter_item[open] .filter_heading {
+  color: #F16D7F;
+}
+.filter_heading {
+  padding: 8px 11px 11px;
+  border-left: 5px solid #F16D7F;
+  border-bottom: 1px solid #EBEBEB;
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.filter_link-box {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 24px 16px;
+}
+.filter_link {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.filter_link:hover {
+  color: #F16D7F;
+}
+
+.sort {
+  display: flex;
+  position: absolute;
+  padding-left: 390px;
+  top: 51px;
+  gap: 30px;
+  /* ==== Бегунок ==== */
+}
+.sort_sort {
+  position: relative;
+}
+.sort_sort[open] .sort_list, .sort_sort[open] path {
+  color: #F16D7F;
+  fill: #F16D7F;
+}
+.sort_list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.sort_item {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: calc(100% + 20px);
+  padding: 9px 9px 12px;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  z-index: 1;
+  top: 22px;
+  left: 0;
+}
+.sort_item_big {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 6px;
+  width: 250px;
+  padding: 9px 9px 12px;
+  background: #FFFFFF;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  z-index: 1;
+  top: 22px;
+  left: 0;
+}
+.sort_item_big span {
+  color: #F16D7F;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.sort_item p {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+.sort_input {
+  width: 200px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  overflow: hidden;
+  height: 20px;
+  border: 1px solid #FF6A6A;
+}
+.sort_input::-webkit-slider-thumb {
+  background: #F16D7F;
+  cursor: pointer;
+  width: 20px;
+  height: 22px;
+  -webkit-appearance: none;
+  box-shadow: -200px 0 0 200px #EBEBEB;
+}
+.sort_input::-moz-range-thumb {
+  background: #F16D7F;
+  cursor: pointer;
+  height: 20px;
+  border-radius: 0px;
+  box-shadow: -200px 0px 0px 200px #EBEBEB;
+  padding: 0px;
+  margin: 0px;
+}
+
+.catalog_site {
+  margin-top: 0;
+}
+
+.rounded {
+  height: 190px;
+  display: flex;
+  justify-content: center;
+}
+.rounded_content {
+  margin-top: 50px;
+  height: 43px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px 16px;
+  border: 1px solid #EBEBEB;
+  gap: 17px;
+}
+.rounded_list {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  list-style-type: none;
+}
+.rounded_list a {
+  color: #C4C4C4;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: normal;
+}
+.rounded_list:hover svg path, .rounded_list a:hover, .rounded_list a:focus {
+  fill: #F16D7F;
+  color: #F16D7F;
 }/*# sourceMappingURL=style.css.map */
