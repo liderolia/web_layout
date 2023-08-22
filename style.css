@@ -1452,6 +1452,7 @@ summary::-webkit-details-marker {
   padding: 10px 10px;
   width: 100px;
   border: 1px solid #A4A4A4;
+  background-color: #FFF;
   color: #4A4A4A;
   text-align: center;
   font-size: 11px;
