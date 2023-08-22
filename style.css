@@ -1254,7 +1254,7 @@ summary::-webkit-details-marker {
   display: flex;
   flex-direction: column;
 }
-.cart_product_content h1 {
+.cart_product_content a {
   color: #222;
   font-size: 24px;
   font-weight: 400;
@@ -1307,21 +1307,15 @@ summary::-webkit-details-marker {
   font-size: 18px;
   font-weight: 300;
 }
-.cart_placeholder:hover::-moz-placeholder {
+.cart_placeholder:focus::-moz-placeholder, .cart_placeholder:hover::-moz-placeholder {
   color: #656565;
   font-size: 18px;
   font-weight: 400;
 }
-.cart_placeholder:hover::placeholder {
+.cart_placeholder:focus::placeholder, .cart_placeholder:hover::placeholder {
   color: #656565;
   font-size: 18px;
   font-weight: 400;
-}
-.cart_placeholder:focus::-moz-placeholder {
-  color: transparent;
-}
-.cart_placeholder:focus::placeholder {
-  color: transparent;
 }
 .cart_item {
   margin-left: 15px;

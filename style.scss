@@ -1419,7 +1419,7 @@ summary::-webkit-details-marker {
 
     }
 
-    &_product_content h1 {
+    &_product_content a {
         color: #222;
         font-size: 24px;
         font-weight: 400;
@@ -1477,14 +1477,11 @@ summary::-webkit-details-marker {
         font-weight: 300;
     }
 
+    &_placeholder:focus::placeholder,
     &_placeholder:hover::placeholder {
         color: #656565;
         font-size: 18px;
         font-weight: 400;
-    }
-
-    &_placeholder:focus::placeholder {
-        color: transparent;
     }
 
     &_item {
