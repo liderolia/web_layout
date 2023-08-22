@@ -4,7 +4,7 @@
 }
 
 @mixin buttonColor {
-    padding: 15px 39px;
+    padding: 15px 40px;
     border: 1px solid #FF6A6A;
     color: #F16D7F;
     font-size: 16px;
@@ -12,7 +12,18 @@
     line-height: normal;
 }
 
+@mixin buttonMonochrome {
+    padding: 15px 20px;
+    border: 1px solid #A4A4A4;
+    color: #000;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: normal;
+}
+
 @mixin buttonColorHover {
     background-color: #F16D7F;
+    border: 1px solid #F16D7F;
     color: #fff;
+
 }

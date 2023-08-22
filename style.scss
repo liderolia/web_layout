@@ -54,6 +54,7 @@ summary::-webkit-details-marker {
     justify-content: space-between;
     z-index: 999;
 
+    & a:focus svg path,
     & a:hover svg path,
     & a:active svg path {
         fill: $colorDecor;
@@ -550,20 +551,22 @@ summary::-webkit-details-marker {
         width: 100px;
         height: 49px;
         padding: 0.375rem 0.75rem;
+        cursor: pointer;
         font-family: inherit;
         font-size: 14px;
         font-weight: 400;
         line-height: normal;
         color: #FFF;
         background-color: $colorDecor;
-        border: 1px solid $colorDecor;
+        border: 1px solid $colorBorder;
         border-radius: 0 2rem 2rem 0;
         transition: 0.2s ease-in-out;
     }
 
+    &_button:hover,
     &_button:active {
-        background-color: $colorDecor;
-        border: 1px solid $colorBorder;
+        border: 1px solid $colorDecor;
+        text-shadow: 0.5px 0 0.5px #FFF;
     }
 }
 
@@ -868,6 +871,15 @@ summary::-webkit-details-marker {
         line-height: normal;
     }
 
+    &_nav::after {
+        content: "/";
+        margin-left: 5px;
+    }
+
+    &_nav:last-child::after {
+        content: none;
+    }
+
     &_color {
         font-weight: 700;
         color: $colorDecor;
@@ -1015,13 +1027,6 @@ summary::-webkit-details-marker {
         z-index: 1;
         top: 22px;
         left: 0;
-    }
-
-    &_item p {
-        color: $colorText;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: normal;
     }
 
     &_placeholder {
@@ -1374,4 +1379,318 @@ summary::-webkit-details-marker {
         fill: $colorDecor;
         color: $colorDecor;
     }
+}
+
+// ==== CART ====
+.cart {
+    padding-top: 100px;
+    padding-bottom: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3%;
+
+    &_right {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    &_product {
+        display: grid;
+        grid-template-columns: 1fr 1fr 66px;
+        gap: $gap30;
+        width: 650px;
+        height: 306px;
+        box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
+        position: relative;
+    }
+
+    &_product img {
+        height: 100%;
+    }
+
+    &_product_content {
+        margin-top: 22px;
+        gap: 42px;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &_product_content h1 {
+        color: #222;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_product_content ul {
+        list-style-type: none;
+        color: #575757;
+        font-family: Lato;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+
+    &_product_content li {
+        margin-bottom: 5px;
+    }
+
+    &_product_content li:nth-child(1)::after {
+        content: "$300";
+        color: $colorDecor;
+        margin-left: 5px;
+    }
+
+    &_product_content li:nth-child(2)::after {
+        content: "Red";
+        color: $colorText;
+        margin-left: 5px;
+    }
+
+    &_product_content li:nth-child(3)::after {
+        content: "Xl";
+        color: $colorText;
+        margin-left: 5px;
+    }
+
+    // === Quantity ===
+    &_product_content li:nth-child(4) {
+        display: flex;
+        align-items: flex-end;
+    }
+
+    &_placeholder {
+        border: 1px solid #EAEAEA;
+        color: #656565;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    &_placeholder::placeholder {
+        color: #B1B1B1;
+        font-size: 18px;
+        font-weight: 300;
+    }
+
+    &_placeholder:hover::placeholder {
+        color: #656565;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    &_placeholder:focus::placeholder {
+        color: transparent;
+    }
+
+    &_item {
+        margin-left: 15px;
+        display: flex;
+        flex-direction: column;
+        width: 75px;
+        background: #FFFFFF;
+    }
+
+    &_number {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+
+        & input[type="number"] {
+            display: block;
+            height: 25px;
+            line-height: 32px;
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-align: center;
+            -moz-appearance: textfield;
+            -webkit-appearance: textfield;
+            appearance: textfield;
+        }
+
+        & input[type="number"]::-webkit-outer-spin-button,
+        & input[type="number"]::-webkit-inner-spin-button {
+            display: none;
+        }
+
+        &_minus {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            bottom: 1px;
+            width: 20px;
+            padding: 0;
+            display: block;
+            text-align: center;
+            border: none;
+            border-right: 1px solid #ddd;
+            font-size: 14px;
+            font-weight: 700;
+            color: #656565;
+        }
+
+        &_plus {
+            position: absolute;
+            top: 1px;
+            right: 1px;
+            bottom: 1px;
+            width: 20px;
+            padding: 0;
+            display: block;
+            text-align: center;
+            border: none;
+            border-left: 1px solid #ddd;
+            font-size: 14px;
+            font-weight: 700;
+            color: #656565;
+        }
+
+        // === end Quantity ===
+    }
+
+
+    &_close {
+        cursor: pointer;
+        position: absolute;
+        top: 28px;
+        right: 22px;
+    }
+
+    &_close:hover svg path {
+        fill: $colorDecor;
+    }
+
+    &_button_flex {
+        margin-top: 30px;
+        width: 650px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_button {
+        width: 235px;
+        text-align: center;
+        @include buttonMonochrome;
+    }
+
+    &_button:hover {
+        @include buttonColorHover;
+    }
+
+    &_left {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    &_form_input {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+        padding-top: 20px;
+        gap: 20px;
+    }
+
+    &_input {
+        display: flex;
+        width: 360px;
+        height: 44px;
+        padding: 0 15px;
+        background-color: white;
+        border: 1px solid #A4A4A4;
+        transition: 0.2s ease-in-out;
+    }
+
+    &_input::placeholder {
+        color: #222;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &_input:hover,
+    &_input:focus {
+        border: 1px solid $colorDecor;
+    }
+
+    &_input:hover::placeholder,
+    &_input:focus::placeholder {
+        color: #B1B1B1;
+    }
+
+    &_input_button {
+        padding: 10px 10px;
+        width: 100px;
+        border: 1px solid #A4A4A4;
+        color: #4A4A4A;
+        text-align: center;
+        font-size: 11px;
+        width: 29%;
+    }
+
+    &_input_button:hover {
+        @include buttonColorHover;
+    }
+
+    &_checkout {
+        display: flex;
+        flex-direction: column;
+        margin-top: 60px;
+        width: 360px;
+        height: 215px;
+        padding: 40px;
+        background-color: #F5F3F3;
+    }
+
+    &_checkout h3 {
+        color: #4A4A4A;
+        font-size: 11px;
+        font-weight: 400;
+        line-height: normal;
+        margin-bottom: 12px;
+        text-align: right;
+    }
+
+    &_checkout h3::after {
+        content: "$900";
+        margin-left: 20px;
+    }
+
+    &_checkout h1 {
+        color: #222;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: normal;
+        text-align: right;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #E2E2E2;
+        margin-bottom: 20px;
+    }
+
+    &_checkout h1::after {
+        content: "$900";
+        margin-left: 20px;
+        font-weight: 700;
+        color: $colorDecor;
+    }
+
+    &_checkout_button {
+        @include buttonColor;
+        font-weight: 300;
+        text-align: center;
+        background-color: #fff;
+    }
+
+    &_checkout_button:hover {
+        @include buttonColorHover;
+    }
+
+
 }
