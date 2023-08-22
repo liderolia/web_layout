@@ -15,7 +15,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&family=Open+Sans:wght@600;800&display=swap"
         rel="stylesheet">
-    <title>Cart</title>
+    <title>Registration</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -31,7 +31,6 @@
                             fill="#E8E8E8" />
                     </svg></a>
             </div>
-
             <nav class="header_right">
                 <div class="header_menu">
                     <a class="menu_button" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="23"
@@ -124,100 +123,73 @@
         </header>
         <section class="breadcrumb center">
             <div class="breadcrumb_left">
-                <h2 class="breadcrumb_title">SHOPPING CART</h2>
+                <h2 class="breadcrumb_title">REGISTRATION</h2>
             </div>
         </section>
-        <section class="cart center">
-            <div class="cart_right">
-                <div class="cart_product">
-                    <div><img src="img/product3.svg" alt=""></div>
-                    <div class="cart_product_content">
-                        <a href="product.html">MANGO PEOPLE T&#8209;SHIRT</a>
-                        <ul>
-                            <li>Price:</li>
-                            <li>Color:</li>
-                            <li>Size:</li>
-                            <li>Quantity:
-                                <span class="cart_item">
-                                    <div class="cart_number">
-                                        <button class="cart_number_minus" type="button"
-                                            onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">–</button>
-                                        <input min="1" max="100" type="number" required placeholder="1"
-                                            class="cart_placeholder">
-                                        <button class="cart_number_plus" type="button"
-                                            onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
-                                    </div>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cart_close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                            <path
-                                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
-                                fill="#575757" />
-                        </svg>
-                    </div>
+        <section class="registration center">
+            <div class="registration__right">
+                <h3>Your Name</h3>
+                <form class="registration__form" action="#">
+                    <p>
+                        <input class="form" type="text" autofocus required placeholder="First Name">
+                    </p>
+                    <p>
+                        <input class="form" type="text" autofocus required placeholder="Last Name">
+                    </p>
+                </form>
+                <div class="registration__sort">
+                    <p>
+                        <input id="color1" class="registration__checkbox" type="checkbox">
+                        <label for="color1">Male</label>
+                    </p>
+                    <p>
+                        <input id="color2" class="registration__checkbox" type="checkbox">
+                        <label for="color2">Female</label>
+                    </p>
+                    <p>
+                        <input id="color3" class="registration__checkbox" type="checkbox">
+                        <label for="color3">Other</label>
+                    </p>
+                </div>
+                <h3>Login details</h3>
+                <form class="registration__form" action="#">
+                    <p>
+                        <input class="form" type="email" autofocus required placeholder="Email">
+                    </p>
+                    <p>
+                        <input class="form" type="password" autofocus required placeholder="Password">
+                    </p>
+                    <p class="registration__text">Please use 8 or more characters, with at least 1 number and a mixture
+                        of uppercase and lowercase
+                        letters</p>
 
-                </div>
-                <div class="cart_product">
-                    <div><img src="img/Catalog2.png" alt=""></div>
-                    <div class="cart_product_content">
-                        <a href="product.html">MANGO PEOPLE T&#8209;SHIRT</a>
-                        <ul>
-                            <li>Price:</li>
-                            <li>Color:</li>
-                            <li>Size:</li>
-                            <li>Quantity:
-                                <span class="cart_item">
-                                    <div class="cart_number">
-                                        <button class="cart_number_minus" type="button"
-                                            onclick="this.nextElementSibling.stepDown(); this.nextElementSibling.onchange();">–</button>
-                                        <input class="cart_placeholder" min="1" max="100" type="number" required
-                                            placeholder="1">
-                                        <button class="cart_number_plus" type="button"
-                                            onclick="this.previousElementSibling.stepUp(); this.previousElementSibling.onchange();">+</button>
-                                    </div>
-                                </span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="cart_close">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                            <path
-                                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
-                                fill="#575757" />
-                        </svg>
-                    </div>
+                    <div class="form_input registration_checkout">
 
-                </div>
-                <div class="cart_button_flex">
-                    <a class="cart_button" href="#">CLEAR SHOPPING CART</a>
-                    <a class="cart_button" href="catalog.html">CONTINUE SHOPPING</a>
-                </div>
-            </div>
-            <div class="cart_left">
-                <h2>SHIPPING ADRESS</h2>
-                <form class="cart_form" action="#">
-                    <p>
-                        <input class="form" type="text" autofocus required placeholder="Bangladesh">
-                    </p>
-                    <p>
-                        <input class="form" type="text" autofocus required placeholder="State">
-                    </p>
-                    <p>
-                        <input class="form" type="text" autofocus required placeholder="Postcode / Zip">
-                    </p>
-                    <button class="cart_input_button">GET A QUOTE</button>
-                    <div class="cart_checkout">
-                        <h3>SUB TOTAL</h3>
-                        <h1>GRAND TOTAL</h1>
-                        <a class="buttonColor cart_checkout_button" href="#">PROCEED TO CHECKOUT</a>
+                        <button class="buttonColor registration_checkout_button" type="submit">JOIN NOW <svg
+                                xmlns="http://www.w3.org/2000/svg" width="17" height="10" viewBox="0 0 17 10"
+                                fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M11.54 0.208095C11.6058 0.142131 11.684 0.0897967 11.77 0.0540883C11.8561 0.01838 11.9483 0 12.0415 0C12.1347 0 12.2269 0.01838 12.313 0.0540883C12.399 0.0897967 12.4772 0.142131 12.543 0.208095L16.7929 4.458C16.8589 4.5238 16.9112 4.60196 16.9469 4.68802C16.9826 4.77407 17.001 4.86632 17.001 4.95949C17.001 5.05266 16.9826 5.14491 16.9469 5.23097C16.9112 5.31702 16.8589 5.39518 16.7929 5.46098L12.543 9.71089C12.41 9.84389 12.2296 9.91861 12.0415 9.91861C11.8534 9.91861 11.673 9.84389 11.54 9.71089C11.407 9.57788 11.3323 9.39749 11.3323 9.2094C11.3323 9.0213 11.407 8.84091 11.54 8.70791L15.2898 4.95949L11.54 1.21107C11.474 1.14528 11.4217 1.06711 11.386 0.981059C11.3503 0.895005 11.3319 0.802752 11.3319 0.709584C11.3319 0.616415 11.3503 0.524162 11.386 0.438109C11.4217 0.352055 11.474 0.273891 11.54 0.208095Z"
+                                    fill="#F16D7F" />
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0 4.95948C0 4.77162 0.0746263 4.59146 0.207462 4.45862C0.340297 4.32579 0.52046 4.25116 0.708318 4.25116H15.583C15.7708 4.25116 15.951 4.32579 16.0838 4.45862C16.2167 4.59146 16.2913 4.77162 16.2913 4.95948C16.2913 5.14734 16.2167 5.3275 16.0838 5.46033C15.951 5.59317 15.7708 5.6678 15.583 5.6678H0.708318C0.52046 5.6678 0.340297 5.59317 0.207462 5.46033C0.0746263 5.3275 0 5.14734 0 4.95948Z"
+                                    fill="#F16D7F" />
+                            </svg></button>
                     </div>
                 </form>
             </div>
-
-
+            <div class="registration__left">
+                <h2>LOYALTY HAS ITS PERKS</h2>
+                <p>Get in on the loyalty program where you can earn points and unlock serious perks. Starting with these
+                    as soon as you join:</p>
+                <ul>
+                    <li>15% off welcome offer</li>
+                    <li>Free shipping, returns and exchanges on all orders</li>
+                    <li>$10 off a purchase on your birthday</li>
+                    <li>Early access to products</li>
+                    <li>Exclusive offers & rewards</li>
+                </ul>
+            </div>
         </section>
         <footer>
             <section class="subscribe center">

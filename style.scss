@@ -45,6 +45,46 @@ summary::-webkit-details-marker {
     padding-right: calc(50% - $withSite / 2);
 }
 
+// ==== style ====
+
+.buttonColor {
+    @include buttonColor;
+
+    &:hover {
+        @include buttonColorHover;
+    }
+}
+
+.form {
+    display: flex;
+    width: 360px;
+    height: 44px;
+    padding: 0 15px;
+    background-color: white;
+    border: 1px solid $colorLight;
+    transition: 0.2s ease-in-out;
+    margin-top: 20px;
+
+    &::placeholder {
+        color: #222;
+        font-size: 13px;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &:hover,
+    &:focus {
+        border: 1px solid $colorDecor;
+    }
+
+    &:hover::placeholder,
+    &:focus::placeholder {
+        color: #B1B1B1;
+    }
+}
+
+// ==== END style ====
+
 .header {
     height: 75px;
     background: #222222;
@@ -1386,7 +1426,6 @@ summary::-webkit-details-marker {
     padding-top: 100px;
     padding-bottom: 130px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 3%;
 
@@ -1586,46 +1625,19 @@ summary::-webkit-details-marker {
         flex-direction: column;
     }
 
-    &_form_input {
+    &_form {
         display: flex;
         flex-direction: column;
         position: relative;
         justify-content: center;
         padding-top: 20px;
-        gap: 20px;
-    }
-
-    &_input {
-        display: flex;
-        width: 360px;
-        height: 44px;
-        padding: 0 15px;
-        background-color: white;
-        border: 1px solid #A4A4A4;
-        transition: 0.2s ease-in-out;
-    }
-
-    &_input::placeholder {
-        color: #222;
-        font-size: 13px;
-        font-weight: 300;
-        line-height: normal;
-    }
-
-    &_input:hover,
-    &_input:focus {
-        border: 1px solid $colorDecor;
-    }
-
-    &_input:hover::placeholder,
-    &_input:focus::placeholder {
-        color: #B1B1B1;
     }
 
     &_input_button {
+        margin-top: 20px;
         padding: 10px 10px;
         width: 100px;
-        border: 1px solid #A4A4A4;
+        border: 1px solid $colorLight;
         background-color: #FFF;
         color: #4A4A4A;
         text-align: center;
@@ -1680,15 +1692,151 @@ summary::-webkit-details-marker {
     }
 
     &_checkout_button {
-        @include buttonColor;
         font-weight: 300;
         text-align: center;
-        background-color: #fff;
     }
 
-    &_checkout_button:hover {
-        @include buttonColorHover;
+}
+
+// ==== Registration ====
+
+.registration {
+    padding-top: 65px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+
+    &__right {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 360px;
     }
 
+    & h3 {
+        color: #222;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;
+    }
+
+    &__sort {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        display: flex;
+        gap: 20px;
+
+        & p {
+            color: #000;
+            font-family: Lato;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+
+        &+label {
+            @include flexAiCenter;
+            user-select: none;
+        }
+
+        &+label::before {
+            content: '';
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            border: 1px solid $colorLight;
+            border-radius: 50%;
+            margin-right: 0.5em;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 50% 50%;
+        }
+
+        &:checked+label::before {
+            border-color: $colorBorder;
+            background-color: $colorDecor;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+        }
+    }
+
+    &__text {
+        margin-top: 15px;
+        color: #B1B1B1;
+        font-family: Lato;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &_checkout_button {
+        margin-top: 40px;
+        @include flexAiCenter;
+        gap: 20px;
+        padding: 15px 20px;
+    }
+
+    &_checkout_button:hover svg path {
+        fill: #fff;
+    }
+
+    &__left {
+        width: 655px;
+        gap: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__left h2 {
+        color: #000;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+    &__left p {
+        color: #000;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+    }
+
+
+    &__left li {
+        margin-bottom: 16px;
+        color: #000;
+        font-family: Lato;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-left: 20px;
+        padding-inline-start: 20px;
+    }
+
+    &__left li::marker {
+        content: url(' data:image/svg+xml, <svg xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16" fill="none" ><path d="M19.8035 0H18.0904C17.8502 0 17.6222 0.111827 17.4752 0.303176L7.3702 13.2826L2.52481 7.05754C2.45151 6.96318 2.35808 6.88688 2.25153 6.83438C2.14499 6.78187 2.0281 6.75451 1.90963 6.75437H0.196467C0.032258 6.75437 -0.0584248 6.94572 0.0420614 7.07494L6.75503 15.6981C7.06874 16.1006 7.67166 16.1006 7.98782 15.6981L19.9579 0.318087C20.0584 0.191349 19.9677 0 19.8035 0Z" fill="black" /></svg>');
+    }
 
 }
