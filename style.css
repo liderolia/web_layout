@@ -1518,7 +1518,7 @@ summary::-webkit-details-marker {
   font-weight: 700;
   color: #F16D7F;
 }
-.cart_checkout_button {
+.cart_checkoutbutton {
   font-weight: 300;
   text-align: center;
 }
@@ -1602,14 +1602,14 @@ summary::-webkit-details-marker {
   font-weight: 300;
   line-height: normal;
 }
-.registration_checkout_button {
+.registration_checkoutbutton {
   margin-top: 40px;
   display: flex;
   align-items: center;
   gap: 20px;
   padding: 15px 20px;
 }
-.registration_checkout_button:hover svg path {
+.registration_checkoutbutton:hover svg path {
   fill: #fff;
 }
 .registration__left {

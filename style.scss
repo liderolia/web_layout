@@ -1691,7 +1691,7 @@ summary::-webkit-details-marker {
         color: $colorDecor;
     }
 
-    &_checkout_button {
+    &_checkoutbutton {
         font-weight: 300;
         text-align: center;
     }
@@ -1786,14 +1786,14 @@ summary::-webkit-details-marker {
         line-height: normal;
     }
 
-    &_checkout_button {
+    &_checkoutbutton {
         margin-top: 40px;
         @include flexAiCenter;
         gap: 20px;
         padding: 15px 20px;
     }
 
-    &_checkout_button:hover svg path {
+    &_checkoutbutton:hover svg path {
         fill: #fff;
     }
 
