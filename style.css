@@ -1835,6 +1835,9 @@ summary::-webkit-details-marker {
   .description_details {
     gap: 22px;
   }
+  .description_light {
+    width: 175px;
+  }
   .description_list {
     font-size: 10px;
   }
